@@ -26,6 +26,7 @@ dist/
 build/
 *.tmp
 *.log
+*.zip
 
 # Entregables generados localmente (ejemplos de ejecuciones sobre repos)
 # Descomentar si se generan tableros y contratos de prueba en la raíz:

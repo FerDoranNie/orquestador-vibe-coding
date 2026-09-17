@@ -37,6 +37,8 @@ orquestador-vibe-coding/
 │   ├── herramientas.md      # Registro de herramientas, pricing oficial y modelos locales
 │   └── ruteo.md             # Taxonomía de tareas, matriz riesgo vs volumen y escalamiento
 └── scripts/
+    ├── empaquetar.ps1       # Empaquetador nativo en PowerShell (.zip)
+    ├── empaquetar.sh        # Empaquetador nativo en Bash (.zip)
     └── inventario.sh        # Script determinista para analizar tamaño, tests y configs
 ```
 
@@ -110,6 +112,28 @@ flowchart LR
 
 ### En Claude Code u otros asistentes
 - Copia o enlaza `SKILL.md` y sus carpetas auxiliares (`references/`, `scripts/`, `assets/`) en el directorio de instrucciones o utilitarios de tu agente.
+
+---
+
+## 📦 Empaquetar para Gemini Spark, Claude Projects o Custom GPTs
+
+Se incluyen dos empaquetadores deterministas que generan un archivo comprimido `.zip` con todos los archivos necesarios (excluyendo automáticamente `.git`, temporales y cachés):
+
+### En Windows (PowerShell):
+```powershell
+.\scripts\empaquetar.ps1
+# O especificando una ruta de salida:
+.\scripts\empaquetar.ps1 -OutputFile "mi-orquestador.zip"
+```
+
+### En Linux / macOS / WSL (Bash):
+```bash
+bash scripts/empaquetar.sh
+# O especificando una ruta de salida:
+bash scripts/empaquetar.sh mi-orquestador.zip
+```
+
+El archivo resultante (`orquestador-vibe-coding.zip`) queda listo en la raíz del proyecto para cargarse directamente en la interfaz de **Gemini Spark**, **Claude Projects**, **OpenAI GPTs** o compartirse como artefacto.
 
 ---
 
