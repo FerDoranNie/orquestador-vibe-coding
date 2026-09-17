@@ -1,0 +1,47 @@
+# Sistema Operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# Caches y entornos
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+env/
+ENV/
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Salidas temporales y de pruebas de análisis de repos
+/tmp/
+tmp/
+output/
+scratch/
+dist/
+build/
+*.tmp
+*.log
+
+# Entregables generados localmente (ejemplos de ejecuciones sobre repos)
+# Descomentar si se generan tableros y contratos de prueba en la raíz:
+# /tablero-orquestacion.html
+# /plan-orquestacion.md
+
+# Variables de entorno y llaves
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# IDEs y editores
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
